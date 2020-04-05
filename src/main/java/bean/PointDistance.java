@@ -17,10 +17,13 @@ public class PointDistance {
 		return Y;
 	}
 
+	
 	public double distance(PointDistance p2) {
 		double dx = (getX() - p2.getX());
 		double dy = (getY() - p2.getY());
 		return Math.sqrt(dx * dx + dy * dy);
 	}
+
+	
 
 }

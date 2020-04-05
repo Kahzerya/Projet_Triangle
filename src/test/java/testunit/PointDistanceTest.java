@@ -10,11 +10,7 @@ import bean.PointDistance;
 
 public class PointDistanceTest {
 
-	private PointDistance p1;
-	private PointDistance p2;
-	private PointDistance p3;
-	private PointDistance p4;
-	private PointDistance p5;
+	private PointDistance p1, p2, p3, p4, p5;
 
 	@BeforeTest
 	public void init() {
@@ -32,10 +28,10 @@ public class PointDistanceTest {
 		// Test des distances
 		assertEquals(p1.distance(p2), 2.0);
 		System.out.println("la distance p1-p2 est " + p1.distance(p2));
-		
+
 		assertEquals(p1.distance(p3), 12.649110640673518);
 		System.out.println("la distance p1-p3 est " + p1.distance(p3));
-		
+
 		assertEquals(p4.distance(p5), 6.708203932499369);
 		System.out.println("la distance p4-p5 est " + p4.distance(p5));
 
