@@ -13,5 +13,7 @@
         <p class="info" id="thirdpoint">${ message3 }</p>
         
         <p class="info" id="triangle">${ triangle }</p>
+        <p class="info" id="distance">${ distance1 }<br>${distance2 }<br>${distance3 }</p>
+        
     </body>
 </html>

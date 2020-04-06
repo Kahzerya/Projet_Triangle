@@ -4,9 +4,17 @@
 		<servlet-name>CreationTriangle</servlet-name>
 		<servlet-class>servlet.CreationTriangle</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>GestionJDBC</servlet-name>
+		<servlet-class>servlet.GestionJDBC</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>CreationTriangle</servlet-name>
 		<url-pattern>/creationTriangle</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GestionJDBC</servlet-name>
+		<url-pattern>/JDBC</url-pattern>
 	</servlet-mapping>
 </web-app>

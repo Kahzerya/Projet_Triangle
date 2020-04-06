@@ -9,9 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import bean.PointDistance;
 import bean.Triangle;
+import bean.envoiEnBase;
 
 public class CreationTriangle extends HttpServlet {
-	
+
 	private int P1Xnum;
 	private int P1Ynum;
 	private int P2Xnum;
@@ -50,17 +51,26 @@ public class CreationTriangle extends HttpServlet {
 		String message3 = "Le troisième point créée a pour coordonnées : " + P3Xnum + " et " + P3Ynum;
 
 		request.setAttribute("message3", message3);
-		
+
 		PointDistance p1 = new PointDistance(P1Ynum, P1Ynum);
 		PointDistance p2 = new PointDistance(P2Xnum, P2Ynum);
 		PointDistance p3 = new PointDistance(P3Xnum, P3Ynum);
-		
-		Triangle t1 = new Triangle(p1,p2,p3);
-		String typeTriangle = "Le triangle est "+t1.getType();
-		
+
+		Triangle t1 = new Triangle(p1, p2, p3);
+		String typeTriangle = "Le triangle est " + t1.getType();
+
+		String distance1 = "Distance p1-p2 : " + p1.distance(p2);
+		String distance2 = "Distance p1-p3 : " + p1.distance(p3);
+		String distance3 = "Distance p2-p3 : " + p2.distance(p3);
+
 		request.setAttribute("triangle", typeTriangle);
+		request.setAttribute("distance1", distance1);
+		request.setAttribute("distance2", distance2);
+		request.setAttribute("distance3", distance3);
 
 		this.getServletContext().getRequestDispatcher("/afficherResult.jsp").forward(request, response);
+		
+		envoiEnBase.envoi(P1Xnum, P1Ynum, P2Xnum, P2Ynum, P3Xnum, P3Ynum);
 
 	}
 

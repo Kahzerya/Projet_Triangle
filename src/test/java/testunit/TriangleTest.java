@@ -55,6 +55,7 @@ public class TriangleTest {
 		System.out.println("Triangle t3 est " + t3.getType());
 
 	}
+	
 
 	@AfterTest
 	public void fin() {
