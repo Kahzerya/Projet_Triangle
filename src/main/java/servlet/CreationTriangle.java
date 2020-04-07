@@ -13,6 +13,10 @@ import bean.envoiEnBase;
 
 public class CreationTriangle extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int P1Xnum;
 	private int P1Ynum;
 	private int P2Xnum;

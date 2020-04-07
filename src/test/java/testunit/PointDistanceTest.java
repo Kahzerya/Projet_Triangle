@@ -39,7 +39,7 @@ public class PointDistanceTest {
 
 	@AfterTest
 	public void fin() {
-		System.out.println("fin de test");
+		System.out.println("fin de PointDistanceTest");
 	}
 
 }

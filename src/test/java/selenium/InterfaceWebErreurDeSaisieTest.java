@@ -1,6 +1,7 @@
 package selenium;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +12,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class InterfaceWebTest {
+public class InterfaceWebErreurDeSaisieTest {
 	
 	private WebDriver driver;
-	private int cpt = 0;
+	private int cpt =0;
 	
 	@BeforeTest
 	public void init(){
@@ -27,13 +28,13 @@ public class InterfaceWebTest {
 	@AfterTest
 	public void fin() {
 		driver.quit();
-		System.out.println("Fin de InterfaceWebTest");
+		System.out.println("Fin de InterfaceWebErreurSaisieTest");
 	}
 	
 	@BeforeMethod
 	public void compteur() {
 		cpt++;
-		System.out.println("Début de InterfaceTest n°"+cpt);
+		System.out.println("Début de InterfaceWebErreurSaisieTest n°"+cpt);
 	}
 	
 	@Test
@@ -42,13 +43,11 @@ public class InterfaceWebTest {
 		
 		String expected = "http://localhost:9090/Projet_Triangle/creerTriangle.jsp";
 		assertEquals(driver.getCurrentUrl(), expected);
-		
 		System.out.println("interfaceTest PASSED");
-		
 	}
 	
 	@Test
-	public void completionTest() {
+	public void champVideTest() {
 		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
@@ -60,7 +59,7 @@ public class InterfaceWebTest {
 		WebElement thirdPointX = driver.findElement(By.xpath("//input[@id='thirdPointX']"));
 		WebElement thirdPointY = driver.findElement(By.xpath("//input[@id='thirdPointY']"));
 		
-		firstPointX.sendKeys("2");
+		firstPointX.sendKeys(""); //champ vide
 		firstPointY.sendKeys("2");
 		
 		secondPointX.sendKeys("5");
@@ -71,18 +70,13 @@ public class InterfaceWebTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=2&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"firstpoint\"]")).getText(), "Le premier point créée a pour coordonnées : 2 et 2");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"secondpoint\"]")).getText(), "Le second point créée a pour coordonnées : 5 et 3");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"thirdpoint\"]")).getText(), "Le troisième point créée a pour coordonnées : 3 et 5");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"triangle\"]")).getText(), "Le triangle est Isocele");
-		
-		System.out.println("completionTest PASSED");
+		System.out.println("champvideTest PASSED");
 	}
 	
 	@Test
-	public void completionNegativeTest() {
+	public void virguleTest() {
 		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
@@ -94,25 +88,49 @@ public class InterfaceWebTest {
 		WebElement thirdPointX = driver.findElement(By.xpath("//input[@id='thirdPointX']"));
 		WebElement thirdPointY = driver.findElement(By.xpath("//input[@id='thirdPointY']"));
 		
-		firstPointX.sendKeys("-2");
+		firstPointX.sendKeys("2,8"); //champ avec une virgule
 		firstPointY.sendKeys("2");
 		
 		secondPointX.sendKeys("5");
-		secondPointY.sendKeys("-3");
+		secondPointY.sendKeys("3");
 		
 		thirdPointX.sendKeys("3");
-		thirdPointY.sendKeys("-5");
+		thirdPointY.sendKeys("5");
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=-2&firstPointY=2&secondPointX=5&secondPointY=-3&thirdPointX=3&thirdPointY=-5");
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=2,8&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"firstpoint\"]")).getText(), "Le premier point créée a pour coordonnées : -2 et 2");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"secondpoint\"]")).getText(), "Le second point créée a pour coordonnées : 5 et -3");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"thirdpoint\"]")).getText(), "Le troisième point créée a pour coordonnées : 3 et -5");
-		assertEquals(driver.findElement(By.xpath("//p[@id=\"triangle\"]")).getText(), "Le triangle est Scalene");
+		System.out.println("virguleTest PASSED");
+	}
+	
+	@Test
+	public void textTest() {
+		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
 		
-		System.out.println("completionNegativeTest PASSED");
+		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
+		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
+		
+		WebElement secondPointX = driver.findElement(By.xpath("//input[@id='secondPointX']"));
+		WebElement secondPointY = driver.findElement(By.xpath("//input[@id='secondPointY']"));
+		
+		WebElement thirdPointX = driver.findElement(By.xpath("//input[@id='thirdPointX']"));
+		WebElement thirdPointY = driver.findElement(By.xpath("//input[@id='thirdPointY']"));
+		
+		firstPointX.sendKeys("blabla"); //champ avec une du texte
+		firstPointY.sendKeys("2");
+		
+		secondPointX.sendKeys("5");
+		secondPointY.sendKeys("3");
+		
+		thirdPointX.sendKeys("3");
+		thirdPointY.sendKeys("5");
+		
+		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
+		
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=blabla&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		
+		System.out.println("textTest PASSED");
 	}
 
 }

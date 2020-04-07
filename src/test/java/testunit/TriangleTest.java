@@ -3,6 +3,7 @@ package testunit;
 import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -14,6 +15,7 @@ public class TriangleTest {
 
 	private Triangle t1, t2, t3;
 	private PointDistance p1, p2, p3, p4, p5;
+	private int cpt = 0;
 
 	@BeforeTest
 	public void initTestIsocele() {
@@ -27,6 +29,12 @@ public class TriangleTest {
 		t1 = new Triangle(p1, p2, p3);
 		t2 = new Triangle(p1, p2, p4);
 		t3 = new Triangle(p1, p2, p5);
+	}
+	
+	@BeforeMethod
+	public void compteur() {
+		cpt++;
+		System.out.println("Test du triangle t"+cpt);	
 	}
 
 	@Test
@@ -59,7 +67,7 @@ public class TriangleTest {
 
 	@AfterTest
 	public void fin() {
-		System.out.println("fin de test");
+		System.out.println("fin de TriangleTest");
 	}
 
 }
