@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import bean.PointDistance;
 import bean.Triangle;
+import bean.TriangleType;
 import bean.envoiEnBase;
 
 public class CreationTriangle extends HttpServlet {
@@ -17,12 +19,12 @@ public class CreationTriangle extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int P1Xnum;
-	private int P1Ynum;
-	private int P2Xnum;
-	private int P2Ynum;
-	private int P3Xnum;
-	private int P3Ynum;
+	private static int P1Xnum;
+	private static int P1Ynum;
+	private static int P2Xnum;
+	private static int P2Ynum;
+	private static int P3Xnum;
+	private static int P3Ynum;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -61,7 +63,8 @@ public class CreationTriangle extends HttpServlet {
 		PointDistance p3 = new PointDistance(P3Xnum, P3Ynum);
 
 		Triangle t1 = new Triangle(p1, p2, p3);
-		String typeTriangle = "Le triangle est " + t1.getType();
+		TriangleType Triangle = t1.getType();
+		String typeTriangle = "Le triangle est " + Triangle;
 
 		String distance1 = "Distance p1-p2 : " + p1.distance(p2);
 		String distance2 = "Distance p1-p3 : " + p1.distance(p3);
@@ -74,7 +77,12 @@ public class CreationTriangle extends HttpServlet {
 
 		this.getServletContext().getRequestDispatcher("/afficherResult.jsp").forward(request, response);
 		
-		envoiEnBase.envoi(P1Xnum, P1Ynum, P2Xnum, P2Ynum, P3Xnum, P3Ynum);
+		try {
+			envoiEnBase.envoi(P1Xnum, P1Ynum, P2Xnum, P2Ynum, P3Xnum, P3Ynum, Triangle);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
