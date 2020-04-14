@@ -7,6 +7,13 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
     <body>
+    <header id="header">
+    <p> Créer son triangle</p>
+    </header>
+    
+    <div id="textpresentation">
+    <p>Merci de saisir les coordonnées de trois points dans un repère orthonormé <span id="textpetit">(entrez que des nombres entiers sans virgules positifs ou négatifs)</span>.</p>
+    </div>
         <div>
             <form method="get" action="creationTriangle">
                 <fieldset>

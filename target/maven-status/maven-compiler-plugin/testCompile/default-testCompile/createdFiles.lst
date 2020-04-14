@@ -1,0 +1,4 @@
+selenium\InterfaceWebTest.class
+testunit\TriangleTest.class
+selenium\InterfaceWebErreurDeSaisieTest.class
+testunit\PointDistanceTest.class

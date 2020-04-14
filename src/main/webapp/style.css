@@ -1,7 +1,22 @@
 /* Général ------------------------------------------------------------------------------------- */
 
-body, p, legend, label, input {
+legend, label, input {
     font: normal 8pt verdana, helvetica, sans-serif;
+}
+
+/* Text -----------------------------------------------------------------------------------------*/
+header{
+	font: bold 24pt verdana, helvetica, sans-serif;
+	color: #0568CD;
+}
+
+#textpresentation{
+	font: normal 12pt verdana, helvetica, sans-serif;
+	color: #429efb;
+}
+
+#textpetit{
+	font: italic 8pt verdana, helevetica, sans-serif;
 }
 
 /* Forms --------------------------------------------------------------------------------------- */
@@ -28,20 +43,13 @@ form input {
 }
 
 
-/* Styles et couleurs -------------------------------------------------------------------------- */
-.requis {
-    color: #c00;
-}
-
-.erreur {
-    color: #900;
-}
-
-.succes {
-    color: #090;
-}
+/* Résultats -------------------------------------------------------------------------- */
 
 .info {
-    font-style: italic;
-    color: #E8A22B;
+	font : italic 8pt verdana, helvetica, sans-serif;
+    color: #272174;
+}
+
+#triangle {
+	font : bold 12pt verdana, helvetica, sans-serif;
 }

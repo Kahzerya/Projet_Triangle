@@ -39,16 +39,16 @@ public class InterfaceWebErreurDeSaisieTest {
 	
 	@Test
 	public void interfaceTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
-		String expected = "http://localhost:9090/Projet_Triangle/creerTriangle.jsp";
+		String expected = "http://localhost:7070/Projet_Triangle/creerTriangle.jsp";
 		assertEquals(driver.getCurrentUrl(), expected);
 		System.out.println("interfaceTest PASSED");
 	}
 	
 	@Test
 	public void champVideTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
 		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
@@ -70,14 +70,14 @@ public class InterfaceWebErreurDeSaisieTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:7070/Projet_Triangle/creationTriangle?firstPointX=&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
 		System.out.println("champvideTest PASSED");
 	}
 	
 	@Test
 	public void virguleTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
 		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
@@ -99,14 +99,14 @@ public class InterfaceWebErreurDeSaisieTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=2,8&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:7070/Projet_Triangle/creationTriangle?firstPointX=2,8&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
 		System.out.println("virguleTest PASSED");
 	}
 	
 	@Test
 	public void textTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
 		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
@@ -128,7 +128,7 @@ public class InterfaceWebErreurDeSaisieTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertNotEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=blabla&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		assertNotEquals(driver.getCurrentUrl(), "http://localhost:7070/Projet_Triangle/creationTriangle?firstPointX=blabla&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
 		System.out.println("textTest PASSED");
 	}

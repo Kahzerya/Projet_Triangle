@@ -38,9 +38,9 @@ public class InterfaceWebTest {
 	
 	@Test
 	public void interfaceTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
-		String expected = "http://localhost:9090/Projet_Triangle/creerTriangle.jsp";
+		String expected = "http://localhost:7070/Projet_Triangle/creerTriangle.jsp";
 		assertEquals(driver.getCurrentUrl(), expected);
 		
 		System.out.println("interfaceTest PASSED");
@@ -49,7 +49,7 @@ public class InterfaceWebTest {
 	
 	@Test
 	public void completionTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
 		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
@@ -71,7 +71,7 @@ public class InterfaceWebTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=2&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
+		assertEquals(driver.getCurrentUrl(), "http://localhost:7070/Projet_Triangle/creationTriangle?firstPointX=2&firstPointY=2&secondPointX=5&secondPointY=3&thirdPointX=3&thirdPointY=5");
 		
 		assertEquals(driver.findElement(By.xpath("//p[@id=\"firstpoint\"]")).getText(), "Le premier point créée a pour coordonnées : 2 et 2");
 		assertEquals(driver.findElement(By.xpath("//p[@id=\"secondpoint\"]")).getText(), "Le second point créée a pour coordonnées : 5 et 3");
@@ -83,7 +83,7 @@ public class InterfaceWebTest {
 	
 	@Test
 	public void completionNegativeTest() {
-		driver.get("http://localhost:9090/Projet_Triangle/creerTriangle.jsp");
+		driver.get("http://localhost:7070/Projet_Triangle/creerTriangle.jsp");
 		
 		WebElement firstPointX = driver.findElement(By.xpath("//*[@id=\"firstPointX\"]"));
 		WebElement firstPointY = driver.findElement(By.xpath("//input[@id='firstPointY']"));
@@ -105,7 +105,7 @@ public class InterfaceWebTest {
 		
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 		
-		assertEquals(driver.getCurrentUrl(), "http://localhost:9090/Projet_Triangle/creationTriangle?firstPointX=-2&firstPointY=2&secondPointX=5&secondPointY=-3&thirdPointX=3&thirdPointY=-5");
+		assertEquals(driver.getCurrentUrl(), "http://localhost:7070/Projet_Triangle/creationTriangle?firstPointX=-2&firstPointY=2&secondPointX=5&secondPointY=-3&thirdPointX=3&thirdPointY=-5");
 		
 		assertEquals(driver.findElement(By.xpath("//p[@id=\"firstpoint\"]")).getText(), "Le premier point créée a pour coordonnées : -2 et 2");
 		assertEquals(driver.findElement(By.xpath("//p[@id=\"secondpoint\"]")).getText(), "Le second point créée a pour coordonnées : 5 et -3");
