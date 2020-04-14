@@ -1,25 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="63" started-at="2020-04-09T16:33:14 CEST" finished-at="2020-04-09T16:33:14 CEST">
+  <suite name="Surefire suite" duration-ms="22184" started-at="2020-04-14T14:37:30 CEST" finished-at="2020-04-14T14:37:52 CEST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="63" started-at="2020-04-09T16:33:14 CEST" finished-at="2020-04-09T16:33:14 CEST">
-      <class name="testunit.PointDistanceTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:testunit.PointDistanceTest@3c0ecd4b]" name="init" is-config="true" duration-ms="32" started-at="2020-04-09T16:33:14 CEST" finished-at="2020-04-09T16:33:14 CEST">
+    <test name="Surefire test" duration-ms="22184" started-at="2020-04-14T14:37:30 CEST" finished-at="2020-04-14T14:37:52 CEST">
+      <class name="selenium.InterfaceWebTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="init" is-config="true" duration-ms="5402" started-at="2020-04-14T14:37:37 CEST" finished-at="2020-04-14T14:37:42 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="DistanceTest()[pri:0, instance:testunit.PointDistanceTest@3c0ecd4b]" name="DistanceTest" duration-ms="0" started-at="2020-04-09T16:33:14 CEST" finished-at="2020-04-09T16:33:14 CEST">
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="compteur" is-config="true" duration-ms="1" started-at="2020-04-14T14:37:46 CEST" finished-at="2020-04-14T14:37:46 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="completionNegativeTest()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="completionNegativeTest" duration-ms="2745" started-at="2020-04-14T14:37:46 CEST" finished-at="2020-04-14T14:37:48 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completionNegativeTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:48 CEST" finished-at="2020-04-14T14:37:48 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="completionTest()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="completionTest" duration-ms="1437" started-at="2020-04-14T14:37:48 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completionTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="interfaceTest()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="interfaceTest" duration-ms="52" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interfaceTest -->
+        <test-method status="PASS" signature="fin()[pri:0, instance:selenium.InterfaceWebTest@73ad2d6]" name="fin" is-config="true" duration-ms="1016" started-at="2020-04-14T14:37:51 CEST" finished-at="2020-04-14T14:37:52 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fin -->
+      </class> <!-- selenium.InterfaceWebTest -->
+      <class name="selenium.InterfaceWebErreurDeSaisieTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="init" is-config="true" duration-ms="7355" started-at="2020-04-14T14:37:30 CEST" finished-at="2020-04-14T14:37:37 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:43 CEST" finished-at="2020-04-14T14:37:43 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="champVideTest()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="champVideTest" duration-ms="1748" started-at="2020-04-14T14:37:43 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- champVideTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="interfaceTest()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="interfaceTest" duration-ms="51" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interfaceTest -->
+        <test-method status="PASS" signature="textTest()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="textTest" duration-ms="521" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:45 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="virguleTest()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="virguleTest" duration-ms="486" started-at="2020-04-14T14:37:45 CEST" finished-at="2020-04-14T14:37:46 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- virguleTest -->
+        <test-method status="PASS" signature="fin()[pri:0, instance:selenium.InterfaceWebErreurDeSaisieTest@3fee9989]" name="fin" is-config="true" duration-ms="957" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:51 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fin -->
+      </class> <!-- selenium.InterfaceWebErreurDeSaisieTest -->
+      <class name="testunit.PointDistanceTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:testunit.PointDistanceTest@7085bdee]" name="init" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:42 CEST" finished-at="2020-04-14T14:37:42 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="DistanceTest()[pri:0, instance:testunit.PointDistanceTest@7085bdee]" name="DistanceTest" duration-ms="1" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DistanceTest -->
-        <test-method status="PASS" signature="fin()[pri:0, instance:testunit.PointDistanceTest@3c0ecd4b]" name="fin" is-config="true" duration-ms="0" started-at="2020-04-09T16:33:14 CEST" finished-at="2020-04-09T16:33:14 CEST">
+        <test-method status="PASS" signature="fin()[pri:0, instance:testunit.PointDistanceTest@7085bdee]" name="fin" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:52 CEST" finished-at="2020-04-14T14:37:52 CEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fin -->
       </class> <!-- testunit.PointDistanceTest -->
+      <class name="testunit.TriangleTest">
+        <test-method status="PASS" signature="initTestIsocele()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="initTestIsocele" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:42 CEST" finished-at="2020-04-14T14:37:42 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTestIsocele -->
+        <test-method status="PASS" signature="TriangleIsoceleTest()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="TriangleIsoceleTest" duration-ms="2" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TriangleIsoceleTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="TriangleRectangleTest()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="TriangleRectangleTest" duration-ms="1" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TriangleRectangleTest -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="compteur" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="compteur()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="compteur" is-config="true" duration-ms="1" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compteur -->
+        <test-method status="PASS" signature="TriangleScaleneTest()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="TriangleScaleneTest" duration-ms="0" started-at="2020-04-14T14:37:50 CEST" finished-at="2020-04-14T14:37:50 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TriangleScaleneTest -->
+        <test-method status="PASS" signature="fin()[pri:0, instance:testunit.TriangleTest@1ce92674]" name="fin" is-config="true" duration-ms="0" started-at="2020-04-14T14:37:52 CEST" finished-at="2020-04-14T14:37:52 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fin -->
+      </class> <!-- testunit.TriangleTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

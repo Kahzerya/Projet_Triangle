@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test thread-count="1" verbose="0" name="Surefire test(failed)">
+    <classes>
+      <class name="selenium.InterfaceWebErreurDeSaisieTest">
+        <methods>
+          <include name="virguleTest"/>
+          <include name="textTest"/>
+          <include name="compteur"/>
+          <include name="champVideTest"/>
+          <include name="fin"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- selenium.InterfaceWebErreurDeSaisieTest -->
+      <class name="selenium.InterfaceWebTest">
+        <methods>
+          <include name="completionTest"/>
+          <include name="init"/>
+          <include name="compteur"/>
+          <include name="completionNegativeTest"/>
+          <include name="fin"/>
+        </methods>
+      </class> <!-- selenium.InterfaceWebTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
